@@ -26,6 +26,7 @@ jobs:
     - name: Create & Push the ttk_docker Container
       run: >-
         echo "$DOCKERHUB_TOKEN" | docker login -u $DOCKER_USERNAME --password-stdin
+        
         echo ".git" > .dockerignore
         
         docker build . --file Dockerfile
